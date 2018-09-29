@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sat Sep 29 21:27:54 BST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-2704-2223-000000795e78 
+Sat Sep 29 21:31:52 BST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-2707-c50c-0000007aae48 
 on database directory C:\Users\steve\IntelliJ Workspace\Data Store v4.0\testdb2 with class loader sun.misc.Launcher$AppClassLoader@b4aac2 
 Loaded from file:/C:/Users/steve/OneDrive/Documents/Java%20support%20files/db-derby-10.14.2.0-bin/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -12,8 +12,8 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Sat Sep 29 21:28:08 BST 2018: Shutting down Derby engine
+Sat Sep 29 21:32:01 BST 2018: Shutting down Derby engine
 ----------------------------------------------------------------
-Sat Sep 29 21:28:08 BST 2018:
-Shutting down instance a816c00e-0166-2704-2223-000000795e78 on database directory C:\Users\steve\IntelliJ Workspace\Data Store v4.0\testdb2 with class loader sun.misc.Launcher$AppClassLoader@b4aac2 
+Sat Sep 29 21:32:01 BST 2018:
+Shutting down instance a816c00e-0166-2707-c50c-0000007aae48 on database directory C:\Users\steve\IntelliJ Workspace\Data Store v4.0\testdb2 with class loader sun.misc.Launcher$AppClassLoader@b4aac2 
 ----------------------------------------------------------------

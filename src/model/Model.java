@@ -1,6 +1,5 @@
 package model;
 
-import encryption.Crypto;
 import encryption.Encryption;
 
 public class Model {
