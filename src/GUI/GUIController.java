@@ -116,7 +116,7 @@ public class GUIController implements Initializable {
 
         // Load preferences
         firstRun = prefs.getBoolean("firstRun", true);
-        // firstRun = true;
+        //firstRun = true;
 
         // Create a database controller
         controller = new Controller();
