@@ -1,5 +1,7 @@
 package model;
 
+import encryption.Encryption;
+
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,6 +12,9 @@ class DataBase {
 	private Password password;
 	private LinkedList<Model> dataBase;
 	private DerbyInterface derbyInterface;
+	private Encryption encryption;
+	private byte[] iv = {-5,10,28,-104,58,112,-49,122,-19,87,5,-43,-82,92,-49,22};
+	private String salt = "Caos5";
 	
 	DataBase(DerbyInterface derbyInterface) {
 		
@@ -21,13 +26,15 @@ class DataBase {
 		
 		// get a password from user
 		password = new Password();
-		//System.out.println(password.getPassword() + "  " + password.getPassword().length());
+
+		//Create an instance of Encryption
+		encryption = Encryption.getDefault(password.getPassword(),salt,iv);
 	}
 	
 	void addModel(String text) {
 		Model newModel;
 		// Encrypt data
-		newModel = new Model(password, text);
+		newModel = new Model(encryption, text);
 		
 		// Add it to the derby database
 		derbyInterface.addModel(newModel);
@@ -48,7 +55,7 @@ class DataBase {
 		Model newModel;
 		
 		// Create new Model with the updated text
-		newModel = new Model(password, newText);
+		newModel = new Model(encryption, newText);
 		
 		// Give the new Model the key of the old one
 		newModel.setKey(dataBase.get(index).getKey());
@@ -84,7 +91,7 @@ class DataBase {
 	private void testDump() {
 		
 		for (Model element : dataBase) {
-			System.out.println(element.getText(password));
+			System.out.println(element.getText(encryption));
 		}
 		
 	}
@@ -110,7 +117,7 @@ class DataBase {
 	
 	String getText(Model model) {
 		
-		return model.getText(password);
+		return model.getText(encryption);
 	}
 	
 }

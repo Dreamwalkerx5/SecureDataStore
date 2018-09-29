@@ -1,6 +1,7 @@
 package model;
 
 import encryption.Crypto;
+import encryption.Encryption;
 
 public class Model {
 	private int key;
@@ -10,24 +11,26 @@ public class Model {
 		key = 0;
 	}
 	
-	Model(Password password, String plainText) {
+	Model(Encryption encryption, String plainText) {
 		key = 0;
-		cryptoText = Crypto.encrypt(plainText, password.getPassword());
+		cryptoText = encryption.encryptOrNull(plainText);
+		System.out.println(cryptoText);
 	}
 	
 	Model(int key, String cryptoText) {
 
 		this.key = key;
 		this.cryptoText = cryptoText;
-		
+		System.out.println(cryptoText);
 	}
 
-	String getText(Password password) {
-		return Crypto.decrypt(cryptoText, password.getPassword());
+	String getText(Encryption encryption) {
+		return encryption.decryptOrNull(cryptoText);
 	}
 	
-	void setText(Password password, String plainText) {
-		cryptoText = Crypto.encrypt(plainText, password.getPassword());
+	void setText(Encryption encryption, String plainText) {
+		cryptoText = encryption.encryptOrNull(plainText);
+
 	}
 	
 	String getCryptoText() {

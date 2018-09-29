@@ -94,7 +94,7 @@ public class Encryption {
         try {
             return encrypt(data);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Something bad here happens!");
             return null;
         }
     }
@@ -180,7 +180,7 @@ public class Encryption {
         try {
             return decrypt(data);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Something bad here happens!");
             return null;
         }
     }
