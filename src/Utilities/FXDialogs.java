@@ -76,11 +76,7 @@ public class FXDialogs {
 
         Optional<String> result = dialog.showAndWait();
 
-        if(result.isPresent()){
-            return result.get();
-        }else {
-            return "";
-        }
+        return result.orElse("");
 
     }
 
@@ -92,7 +88,7 @@ public class FXDialogs {
 
         Optional<ButtonType> result = alert.showAndWait();
         // ... user chose OK
-// ... user chose CANCEL or closed the dialog
+        // ... user chose CANCEL or closed the dialog
         return result.get() == ButtonType.OK;
     }
 

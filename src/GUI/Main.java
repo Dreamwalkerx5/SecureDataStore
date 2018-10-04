@@ -31,7 +31,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static void setController(Controller currentController){
+    static void setController(Controller currentController){
 
         // Get Model Controller from GUIController so we can do a controlled shutdown from here!
         controller = currentController;

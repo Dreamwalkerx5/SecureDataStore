@@ -22,7 +22,7 @@ class DataBase {
 		this.derbyInterface = derbyInterface;
 		
 		// create an empty data base
-		dataBase = new LinkedList<Model>();
+		dataBase = new LinkedList<>();
 		
 		// get a password from user
 		password = new Password();
